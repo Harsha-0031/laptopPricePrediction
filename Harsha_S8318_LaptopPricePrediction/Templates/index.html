@@ -1,0 +1,109 @@
+{% extends 'header.html' %}
+{% block title %}
+<title>Home</title>
+{%endblock%}
+    <!-- Company	TypeName	Inches	ScreenResolution	Cpu	Ram	Memory	Gpu	OpSys	Weight -->
+{%block body%}
+    <div class="hero">
+
+        <form action="/price", method="post">
+            <select  name="Company" id = 'cmp' aria-label="Default select example">
+                <option value="">Company</option>
+                {% for key, value in data.items() %}
+                    {% if key == 'Company' %}
+                        {% for i in value %}
+                            <option value="{{ i }}">{{ i }}</option>
+                        {% endfor %}
+                    {%endif%}
+                {% endfor %}
+            </select>
+            
+            <select  name="TypeName" aria-label="Default select example" >
+                <option value="">TypeName</option>
+                {% for key, value in data.items() %}
+                    {% if key == 'TypeName' %}
+                        {% for i in value %}
+                            <option value="{{ i }}">{{ i }}</option>
+                        {% endfor %}
+                    {%endif%}
+                {% endfor %}
+            </select>
+    
+
+            <select  name="ScreenResolution" aria-label="Default select example" >
+                <option value="">ScreenResolution</option>
+                {% for key, value in data.items() %}
+                    {% if key == 'ScreenResolution' %}
+                        {% for i in value %}
+                            <option value="{{ i }}">{{ i }}</option>
+                        {% endfor %}
+                    {%endif%}
+                {% endfor %}
+            </select>
+            <select  name="Cpu" aria-label="Default select example" >
+                <option value="">CPU</option>
+                {% for key, value in data.items() %}
+                    {% if key == 'Cpu' %}
+                        {% for i in value %}
+                            <option value="{{ i }}">{{ i }}</option>
+                        {% endfor %}
+                    {%endif%}
+                {% endfor %}
+            </select>
+            <select  name="Ram" aria-label="Default select example" >
+                <option value="">RAM</option>
+                {% for key, value in data.items() %}
+                    {% if key == 'Ram' %}
+                        {% for i in value %}
+                            <option value="{{ i }}">{{ i }}</option>
+                        {% endfor %}
+                    {%endif%}
+                {% endfor %}
+            </select>
+            <select  name="Memory" aria-label="Default select example" >
+                <option value="">Memory</option>
+                {% for key, value in data.items() %}
+                    {% if key == 'Memory' %}
+                        {% for i in value %}
+                            <option value="{{ i }}">{{ i }}</option>
+                        {% endfor %}
+                    {%endif%}
+                {% endfor %}
+            </select>
+            <select  name="Gpu" aria-label="Default select example" >
+                <option value="">GPU</option>
+                {% for key, value in data.items() %}
+                    {% if key == 'Gpu' %}
+                        {% for i in value %}
+                            <option value="{{ i }}">{{ i }}</option>
+                        {% endfor %}
+                    {%endif%}
+                {% endfor %}
+            </select>
+            <select  name="OpSys" aria-label="Default select example" >
+                <option value="">Operating System</option>
+                {% for key, value in data.items() %}
+                    {% if key == 'OpSys' %}
+                        {% for i in value %}
+                            <option value="{{ i }}">{{ i }}</option>
+                        {% endfor %}
+                    {%endif%}
+                {% endfor %}
+            </select>
+            <select  name="Weight" aria-label="Default select example" >
+                <option value="">Weight</option>
+                {% for key, value in data.items() %}
+                    {% if key == 'Weight' %}
+                        {% for i in value %}
+                            <option value="{{ i }}">{{ i }}</option>
+                        {% endfor %}
+                    {%endif%}
+                {% endfor %}
+            </select>
+            <input type="submit" value="submit" class="btn_sub">
+        </form>
+    </div>
+{%endblock%}
+   
+
+  
